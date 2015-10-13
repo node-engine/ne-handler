@@ -42,6 +42,15 @@ module.exports = neHandler;
 
 /*
 
+flatten object sources:
+
+ https://gist.github.com/penguinboy/762197
+ https://gist.github.com/gdibble/9e0f34f0bb8a9cf2be43
+
+*/
+
+/*
+
  var neHandler = require('../ne-handler');
 
 
