@@ -1,0 +1,26 @@
+{
+  "name": "ne-handler",
+  "version": "1.0.0",
+  "description": "Some utilities to use in Node Engine handlers",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^0.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-engine/ne-handler.git"
+  },
+  "keywords": [
+    "nodeEngine"
+  ],
+  "author": "Bernard Hamann",
+  "license": "SEE LICENSE IN readme.md",
+  "bugs": {
+    "url": "https://github.com/node-engine/ne-handler/issues"
+  },
+  "homepage": "https://github.com/node-engine/ne-handler#readme"
+}
