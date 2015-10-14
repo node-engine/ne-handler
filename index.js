@@ -14,6 +14,8 @@ var neHandler = {
     },
 
     flattenObject: function(ob) {
+        var self = this
+
         var toReturn = {};
         var flatObject;
         for (var i in ob) {
@@ -21,7 +23,7 @@ var neHandler = {
                 continue;
             }
             if ((typeof ob[i]) === 'object') {
-                flatObject = flattenObject(ob[i]);
+                flatObject = self.flattenObject(ob[i]);
                 for (var x in flatObject) {
                     if (!flatObject.hasOwnProperty(x)) {
                         continue;
@@ -42,12 +44,12 @@ module.exports = neHandler;
 
 /*
 
-flatten object sources:
+ flatten object sources:
 
  https://gist.github.com/penguinboy/762197
  https://gist.github.com/gdibble/9e0f34f0bb8a9cf2be43
 
-*/
+ */
 
 /*
 
