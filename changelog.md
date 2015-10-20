@@ -21,10 +21,19 @@ Dependencies
 - DR Remove Dependency: A  dependency is removed from the package
 - DU Update Dependency: A dependency is updated in the package
 
+## 1.1.2
+
+Release date: 20151020
+
+[DN]
+Added ne-auto-off package
+
+
 ## 1.1.1
 
 Release date: 20151020
 
+[BF]
 Fixes bugs caused by 1.1.0
 
 
