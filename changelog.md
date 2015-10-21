@@ -21,6 +21,15 @@ Dependencies
 - DR Remove Dependency: A  dependency is removed from the package
 - DU Update Dependency: A dependency is updated in the package
 
+
+## 1.1.3
+
+Release date: 201510201
+
+Removed 1.1.0
+- Caused too many bugs
+
+
 ## 1.1.2
 
 Release date: 20151020
