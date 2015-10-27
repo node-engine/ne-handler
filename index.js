@@ -26,7 +26,25 @@ var neHandler = {
             )
     },
 
-    flattenObject: function(ob) {
+    flattenObject: require('./utilities/flattenObject'),
+
+    buildFormFields: require('./utilities/buildFormFields')
+
+};
+
+
+module.exports = neHandler;
+
+/*
+
+ flatten object sources:
+
+ https://gist.github.com/penguinboy/762197
+ https://gist.github.com/gdibble/9e0f34f0bb8a9cf2be43
+
+
+
+ flattenObject: function(ob) {
         var self = this
 
         var toReturn = {};
@@ -48,19 +66,7 @@ var neHandler = {
             }
         }
         return toReturn;
-    }
-
-};
-
-
-module.exports = neHandler;
-
-/*
-
- flatten object sources:
-
- https://gist.github.com/penguinboy/762197
- https://gist.github.com/gdibble/9e0f34f0bb8a9cf2be43
+    },
 
  */
 
