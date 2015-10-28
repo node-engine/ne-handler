@@ -110,7 +110,7 @@ var buildFormFields = function(dataName, object, dataRef, options){
                 console.log('');
 
                 fields.push(element(
-                    'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
+                    'div', {id: index2, key: index2, className: "ne-handler-field ne-handler-field-" + dataName},
                     element(
                         'label',
                         {},
@@ -143,7 +143,7 @@ var buildFormFields = function(dataName, object, dataRef, options){
                 console.log('');
 
                 fields.push(element(
-                    'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
+                    'div', {id: index2, key: index2, className: "ne-handler-field ne-handler-field-" + dataName},
                     element(
                         'label',
                         {},
@@ -193,7 +193,7 @@ var buildFormFields = function(dataName, object, dataRef, options){
                 });
 
                 fields.push(element(
-                    'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
+                    'div', {id: index2, key: index2, className: "ne-handler-field ne-handler-field-" + dataName},
                     element(
                         'label', {},
                         field.label + ": "
@@ -227,7 +227,7 @@ var buildFormFields = function(dataName, object, dataRef, options){
                 console.log('');
 
                 fields.push(element(
-                    'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
+                    'div', {id: index2, key: index2, className: "ne-handler-field ne-handler-field-" + dataName},
                     element(
                         'label', {},
                         field.label
@@ -257,7 +257,7 @@ var buildFormFields = function(dataName, object, dataRef, options){
                 console.log('');
 
                 fields.push(element(
-                    'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
+                    'div', {id: index2, key: index2, className: "ne-handler-field ne-handler-field-" + dataName},
                     element(
                         'label', {},
                         field.label
