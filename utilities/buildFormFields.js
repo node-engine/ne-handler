@@ -1,5 +1,32 @@
 var _ = require("lodash");
-var flattenObject = require('./flattenObject').flattenObject;
+var React = require('react');
+var element = React.createElement;
+
+var neHandler = {
+    flattenObject: function(ob) {
+        var self = this
+        var toReturn = {};
+        var flatObject;
+        for (var i in ob) {
+            if (!ob.hasOwnProperty(i)) {
+                continue;
+            }
+            if ((typeof ob[i]) === 'object') {
+                flatObject = self.flattenObject(ob[i]);
+                for (var x in flatObject) {
+                    if (!flatObject.hasOwnProperty(x)) {
+                        continue;
+                    }
+                    toReturn[i + (!!isNaN() ? '.' + x : '')] = flatObject[x];
+                }
+            } else {
+                toReturn[i] = ob[i];
+            }
+        }
+        return toReturn;
+    }
+};
+
 
 var buildFormFields = function(dataName, object, dataRef, options){
 
@@ -12,7 +39,7 @@ var buildFormFields = function(dataName, object, dataRef, options){
     console.log('');
     console.log('');
 
-    var flatObject = flattenObject(object);
+    var flatObject = neHandler.flattenObject(object);
 
     console.log('');
     console.log('');
@@ -75,6 +102,13 @@ var buildFormFields = function(dataName, object, dataRef, options){
 
             if(options && options.noEdit && options.noEdit  === true){
 
+                console.log('');
+                console.log('');
+                console.log('buildEditField: Field: options.noEdit === true');
+                console.log(field);
+                console.log('');
+                console.log('');
+
                 fields.push(element(
                     'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
                     element(
@@ -100,6 +134,13 @@ var buildFormFields = function(dataName, object, dataRef, options){
             }
 
             else if(field.editType && field.editType === "noEdit"){
+
+                console.log('');
+                console.log('');
+                console.log('buildEditField: Field: field.editType === "noEdit"');
+                console.log(field);
+                console.log('');
+                console.log('');
 
                 fields.push(element(
                     'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
@@ -127,7 +168,22 @@ var buildFormFields = function(dataName, object, dataRef, options){
 
             else if(field.editType && field.editType === "select"){
 
+                console.log('');
+                console.log('');
+                console.log('buildEditField: field.editType === "select"');
+                console.log(field);
+                console.log('');
+                console.log('');
+
+
                 var selectOptions = field.selectOptions.map(function(option, index3){
+
+                    console.log('');
+                    console.log('');
+                    console.log('buildEditField: field.editType === "select" : option');
+                    console.log(option);
+                    console.log('');
+                    console.log('');
 
                     return element(
                         "option",{value: option, key: index3},
@@ -163,6 +219,12 @@ var buildFormFields = function(dataName, object, dataRef, options){
 
             else if(field.editType && field.editType === "textarea"){
 
+                console.log('');
+                console.log('');
+                console.log('buildEditField: field.editType === "textarea"');
+                console.log(field);
+                console.log('');
+                console.log('');
 
                 fields.push(element(
                     'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
@@ -186,6 +248,13 @@ var buildFormFields = function(dataName, object, dataRef, options){
             }
 
             else{
+
+                console.log('');
+                console.log('');
+                console.log('buildEditField: field.editType nothing specified');
+                console.log(field);
+                console.log('');
+                console.log('');
 
                 fields.push(element(
                     'div', {id: index2, key: index2, className: "ne-data-field-" + dataName},
