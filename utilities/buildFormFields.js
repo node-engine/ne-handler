@@ -48,7 +48,6 @@ var buildFormFields = function(dataName, object, dataRef, options){
     console.log('');
     console.log('');
 
-
     var dataRefIndex = _.findIndex(dataRef, function(chr) {
         return chr.name == dataName;
     });
